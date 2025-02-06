@@ -823,7 +823,7 @@ body {
   }
 
   .container-items-main .container-holder .body-items {
-    width: 375px;
+    width: 330px;
     margin-top: -110px;
   }
 
@@ -1021,6 +1021,7 @@ body {
     .header
     .container-box {
     margin-left: 5px;
+    width: 100%;
   }
 
   .container-modal-back-project
@@ -1031,8 +1032,9 @@ body {
     .header
     .container-box
     p {
-    /* margin-left: 5px; */
-    margin-top: -5px;
+    margin-left: 5px;
+    margin-top: -1px;
+    height: 2px;
   }
 
   .container-modal-back-project
@@ -1188,5 +1190,10 @@ body {
 
   .svg-hamgurger-hide {
     display: none;
+  }
+
+  /* success */
+  .container-padder-moadl-success .container-items {
+    width: 330px;
   }
 }
