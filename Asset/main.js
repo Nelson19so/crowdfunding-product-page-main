@@ -5,7 +5,7 @@ const containerPadderModal = document.getElementById("container-padder-moadl");
 const closeModal = document.getElementById("closeModal");
 const closeModalSuccess = document.getElementById("closeModalSuccess");
 const successmsg = document.getElementById("success");
-const displaysuccess = document.getElementById("displaysuccess");
+const displaysuccess = document.querySelectorAll("#displaysuccess");
 
 showModal.addEventListener("click", function () {
   modal.style.display = "block";
@@ -24,12 +24,16 @@ closeModalSuccess.addEventListener("click", function () {
   successmsg.style.display = "none";
 });
 
-displaysuccess.addEventListener("click", function () {
-  containerPadderModal.style.display = "none";
-  successmsg.style.display = "block";
+displaysuccess.forEach((btnSuccess) => {
+  btnSuccess.addEventListener("click", function () {
+    containerPadderModal.style.display = "none";
+    successmsg.style.display = "block";
+  });
 });
 
-// navbar
+// modal ends-------------------------------------
+
+// navbar drop down.
 const navbarBtn = document.getElementById("navbar-drop");
 const navItems = document.getElementById("navitems");
 const hambugerModal = document.getElementById("hambuger-modal");
@@ -43,4 +47,26 @@ navbarBtn.addEventListener("click", function () {
   navItems.classList.toggle("close-nav");
   hambugerClose.classList.toggle("svg-hamgurger-hide");
   hambugerModal.classList.toggle("svg-hamgurger-hide");
+});
+
+// navbar ends-------------------------
+
+// Modal comfirm checkbox
+const wrapper = document.querySelectorAll(".container-reward");
+
+wrapper.forEach((wrappercontainer) => {
+  wrappercontainer.addEventListener("click", () => {
+    const btnUnderModal = wrappercontainer.querySelector(".btn--under-modal");
+
+    const checkbox = wrappercontainer.querySelector("input[type='checkbox']");
+    checkbox.checked = !checkbox.checked;
+
+    if (checkbox.checked) {
+      btnUnderModal.style.display = "flex";
+      wrappercontainer.style.border = "1.4px solid hsl(176, 50%, 47%)";
+    } else {
+      wrappercontainer.style.border = "";
+      btnUnderModal.style.display = "none";
+    }
+  });
 });

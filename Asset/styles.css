@@ -493,6 +493,14 @@ body {
 
 .container-button--items {
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-button--items .btn-holder {
+  width: 100%;
+  display: flex;
+  justify-content: right;
 }
 
 .container-button--items .text {
@@ -524,21 +532,18 @@ body {
 
 .container-button--items .container-button-- {
   padding-top: 17px;
+  width: 100%;
 }
 
 .text-muted- {
   color: var(--button-muted);
 }
 
-/* .container-bamboo-stand .container-padder- {
-} */
-
 /* ---------------------------------------------------- */
 /* Modal to back this project */
 .container-modal-back-project {
   position: fixed;
   width: 100vw;
-  /* display: none; */
   height: 230vh;
   overflow-x: hidden;
   z-index: 5555;
@@ -553,7 +558,8 @@ body {
   padding-top: 15%;
   width: 100%;
   position: absolute;
-  height: 125%;
+  height: auto;
+  padding-bottom: 165%;
   display: none;
 }
 
@@ -702,13 +708,25 @@ body {
 
 .container-button-under {
   border-top: 1px solid var(--border);
-  padding: 25px 20px;
+}
+
+.container-button-under .justify {
   display: flex;
   justify-content: space-between;
+  padding: 25px 20px;
+  width: 100%;
 }
 
 .container-button-under .container-text {
   padding-top: 10px;
+}
+
+.limited-pledge {
+  opacity: 0.4;
+}
+
+.btn--under-modal {
+  display: none;
 }
 
 /* ------------------------------------------------------- */
@@ -751,6 +769,7 @@ body {
   cursor: pointer;
   transition: 1s;
 }
+
 .button:hover {
   background-color: var(--Dark-cyan);
 }
@@ -790,6 +809,85 @@ body {
 
 .button-- span {
   color: var(--Dark-gray);
+}
+
+/* input -- */
+.checkbox-wrapper {
+  float: left;
+}
+
+.checkbox-wrapper:hover .check {
+  stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.checkbox-wrapper .background {
+  fill: var(--Moderate-cyan);
+  transition: ease all 0.6s;
+  -webkit-transition: ease all 0.6s;
+}
+
+.checkbox-wrapper .stroke {
+  fill: none;
+  stroke: #fff;
+  stroke-miterlimit: 10;
+  stroke-width: 2px;
+  stroke-dashoffset: 100;
+  stroke-dasharray: 100;
+  transition: ease all 0.6s;
+  -webkit-transition: ease all 0.6s;
+}
+
+.checkbox-wrapper .check {
+  fill: none;
+  stroke: #fff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  stroke-dashoffset: 22;
+  stroke-dasharray: 22;
+  transition: ease all 0.6s;
+  -webkit-transition: ease all 0.6s;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  margin: 0;
+  opacity: 0;
+  -appearance: none;
+  -webkit-appearance: none;
+}
+
+.checkbox-wrapper input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked + svg .background {
+  fill: var(--Moderate-cyan);
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked .btn--under-modal {
+  display: block;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked + svg .stroke {
+  stroke-dashoffset: 0;
+}
+
+.checkbox-wrapper input[type="checkbox"]:checked + svg .check {
+  stroke-dashoffset: 0;
 }
 
 /* --------------------------------------------------- */
@@ -948,7 +1046,6 @@ body {
     .rewards-inner
     p {
     margin-left: 10%;
-    /* margin-top: -6%; */
   }
 
   .container-modal-back-project .container-padder-moadl {
@@ -957,14 +1054,17 @@ body {
   }
 
   .container-modal-back-project .container-padder-moadl {
-    height: 140%;
+    height: 110%;
   }
 
-  .container-button-under {
+  .container-button-under .justify {
     border-top: 1px solid var(--border);
-    padding: 10px 20px;
+  }
+
+  .container-button-under .justify {
     display: block;
     justify-content: none;
+    padding: 10px 20px;
   }
 
   .container-modal-back-project {
@@ -1069,6 +1169,17 @@ body {
     display: block;
   }
 
+  .container-modal-back-project
+    .container-padder-moadl
+    .container-reward
+    .container-inner
+    .main-holder-articles
+    .header
+    .pre {
+    display: block;
+    margin-right: -40px;
+  }
+
   /* navbar small screen */
 
   .container-crowfund-product
@@ -1103,10 +1214,6 @@ body {
     img {
     width: 40%;
   }
-
-  /* .display-block {
-    display: block;
-  } */
 
   .close-nav {
     display: none;
@@ -1195,5 +1302,22 @@ body {
   /* success */
   .container-padder-moadl-success .container-items {
     width: 330px;
+  }
+
+  .container-button--items {
+    width: 100%;
+    display: block;
+    justify-content: none;
+  }
+
+  .container-button--items .btn-holder {
+    width: 100%;
+    display: flex;
+    justify-content: left;
+  }
+
+  /* input  */
+  .checkbox-wrapper {
+    margin-top: -3px;
   }
 }
