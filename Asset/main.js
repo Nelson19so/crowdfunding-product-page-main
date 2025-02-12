@@ -1,5 +1,5 @@
 // modal
-const showModal = document.getElementById("back-project");
+const showModal = document.querySelectorAll("#back-project");
 const modal = document.getElementById("modal");
 const containerPadderModal = document.getElementById("container-padder-moadl");
 const closeModal = document.getElementById("closeModal");
@@ -7,9 +7,11 @@ const closeModalSuccess = document.getElementById("closeModalSuccess");
 const successmsg = document.getElementById("success");
 const displaysuccess = document.querySelectorAll("#displaysuccess");
 
-showModal.addEventListener("click", function () {
-  modal.style.display = "block";
-  containerPadderModal.style.display = "block";
+showModal.forEach((modalShowUp) => {
+  modalShowUp.addEventListener("click", function () {
+    modal.style.display = "block";
+    containerPadderModal.style.display = "block";
+  });
 });
 
 closeModal.addEventListener("click", function () {
@@ -25,7 +27,8 @@ closeModalSuccess.addEventListener("click", function () {
 });
 
 displaysuccess.forEach((btnSuccess) => {
-  btnSuccess.addEventListener("click", function () {
+  btnSuccess.addEventListener("click", function (e) {
+    e.preventDefault();
     containerPadderModal.style.display = "none";
     successmsg.style.display = "block";
   });
