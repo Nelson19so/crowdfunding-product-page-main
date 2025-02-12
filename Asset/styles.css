@@ -544,7 +544,7 @@ body {
 .container-modal-back-project {
   position: fixed;
   width: 100vw;
-  height: 230vh;
+  height: 240vh;
   overflow-x: hidden;
   z-index: 5555;
   background-color: hsla(0, 0%, 0%, 0.6);
@@ -1145,7 +1145,8 @@ body {
     .header
     .container-box
     .pre {
-    margin-left: 25px;
+    display: block;
+    width: 100%;
   }
 
   .container-modal-back-project
