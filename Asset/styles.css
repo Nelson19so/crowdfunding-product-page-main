@@ -729,6 +729,10 @@ body {
   display: none;
 }
 
+.hidden-div-Display {
+  display: flex !important;
+}
+
 /* ------------------------------------------------------- */
 /* success modal */
 .container-padder-moadl-success {
