@@ -61,6 +61,9 @@ mobile view with navbar
 ![](./Asset/images/screenshot/mobile-success-modal.png)
 mobile success modal view
 
+![](./Asset/images/screenshot/mobile-menu.png)
+mobile success modal view
+
 Mastercraft Bamboo Monitor Riser
 A beautiful & handcrafted monitor stand to reduce neck and eye strain.
 

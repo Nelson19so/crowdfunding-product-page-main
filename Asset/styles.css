@@ -61,7 +61,7 @@ body {
   .container-transparent-nav-holder {
   width: 100%;
   position: absolute;
-  background-color: hsla(0, 0%, 0%, 0.6);
+  background-color: hsla(0, 0%, 0%, 0.2);
   height: 100%;
   top: 0;
 }
@@ -266,11 +266,46 @@ body {
   .container-buttons-
   .container-icon-bookmark
   p {
-  color: var(--Moderate-cyan);
   float: right;
   margin-top: 20px;
   margin-left: 8px;
   font-weight: 700;
+}
+
+.container-items-main
+  .container-holder
+  .body-items
+  .header-items
+  .container-holder
+  .container-buttons-
+  .container-icon-bookmark
+  .container-wrapper:hover
+  p {
+  color: var(--Moderate-cyan);
+}
+
+.container-items-main
+  .container-holder
+  .body-items
+  .header-items
+  .container-holder
+  .container-buttons-
+  .container-icon-bookmark
+  .container-wrapper:hover
+  .bookmark {
+  fill: var(--Moderate-cyan);
+}
+
+.container-items-main
+  .container-holder
+  .body-items
+  .header-items
+  .container-holder
+  .container-buttons-
+  .container-icon-bookmark
+  .container-wrapper:hover
+  .bookmark-path {
+  fill: var(--white);
 }
 
 .container-items-main .container-holder .body-items .container-main {
@@ -1195,6 +1230,23 @@ body {
     padding: 40px 5%;
     display: block;
     justify-content: none;
+  }
+
+  .close-nav-modal {
+    background-color: transparent !important;
+    height: 100% !important;
+  }
+
+  .container-crowfund-product
+    .container-crowdfund-project-wrapper
+    .top-img
+    .container-transparent-nav-holder {
+    width: 100vw;
+    position: absolute;
+    z-index: 5555;
+    background-color: hsla(0, 0%, 0%, 0.4);
+    height: 310vh;
+    top: 0;
   }
 
   .svg-hamgurger {
