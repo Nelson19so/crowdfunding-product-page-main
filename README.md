@@ -47,7 +47,7 @@ Desktop success modal view
 
 Also responsible for mobile mode
 
-<h3>Mobile version</h3>
+<h1>Mobile version</h1>
 
 ![](./Asset/images/screenshot/mobile-mode.png)
 Mobile view mode
@@ -55,13 +55,10 @@ Mobile view mode
 ![](./Asset/images/screenshot/mobile-version-modal.png)
 mobile modal view
 
-![](./Asset/images/screenshot/Mobile-version-with-navbar.png)
+![](./Asset/images/screenshot/mobile-menu.png)
 mobile view with navbar
 
 ![](./Asset/images/screenshot/mobile-success-modal.png)
-mobile success modal view
-
-![](./Asset/images/screenshot/mobile-menu.png)
 mobile success modal view
 
 Mastercraft Bamboo Monitor Riser
